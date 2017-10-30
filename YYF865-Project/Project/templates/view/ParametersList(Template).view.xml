@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE mvc:View>
+<!-- View Template of the Metrics List Division -->
+<!-- Author: Mark (YeeChen Fong) -->
+<!-- (Template is not 100% functional without making adjustments, USE AT OWN DISCRETION) -->
+<mvc:View
+        controllerName="ScenarioMod.controller.ParametersList"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:core="sap.ui.core">
+
+    <!-- Priority -->
+    <Panel
+            width="100%"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>workPriorityTitle}"/>
+                <ToolbarSpacer/>
+                <Button
+                        class="sapUiSmallMarginBottom"
+                        icon="sap-icon://drop-down-list"
+                        press="onBasePriorities">
+                    <customData>
+                        <core:CustomData
+                                key="multi"
+                                value="true"/>
+                        <core:CustomData
+                                key="remember"
+                                value="true"/>
+                    </customData>
+                </Button>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <Text
+                    text="{i18n>workPriorityDescription}"
+                    class="sapThemeHighlight-asColor panelHeadText"/>
+
+            <!-- Dynamic creation of Base Priorities parameters -->
+            <List items="{
+                  path: '/dynamicParameterRowsBasePriorities'
+                  }"
+                  showNoData="false">
+                <CustomListItem type="Active">
+                    <Text
+                            text="{dynamicParameterBasePrioritiesFullName}"
+                            class="sapThemeHighlight-asColor panelHeadText"
+                            width="100%"/>
+
+                    <Input
+                            value="{dynamicParameterBasePrioritiesValue}"
+                            valueLiveUpdate="true"
+                            width="100%"/>
+                </CustomListItem>
+            </List>
+        </content>
+    </Panel>
+
+
+    <!-- Staff Count -->
+    <Panel
+            width="100%"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>staffCountTitle}"/>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <Text
+                    text="{i18n>staffCountDescription}"
+                    class="sapThemeHighlight-asColor panelHeadText"/>
+            <Input
+                    class="sapThemeHighlight-asColor inputValueText"
+                    value="{component>/inputParameters/value1}"
+                    valueLiveUpdate="true"
+                    width="100%"/>
+            <Text
+                    text="{i18n>staffCountCurrentValue} {component>/inputParameters/value1}"
+                    class="sapThemeHighlight-asColor currentValueText"
+                    width="100%"/>
+            <!--Read Json by single parameter-->
+            <Text
+                    text="{i18n>staffCountCurrentValue} {parameters>/Parameters(1)/PRODUCT_NAME}"
+                    class="sapThemeHighlight-asColor"
+                    width="100%"/>
+        </content>
+    </Panel>
+
+    <!-- Training Staff -->
+    <Panel
+            width="100%"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>trainingStaffTitle}"/>
+                <ToolbarSpacer/>
+                <Button
+                        class="sapUiSmallMarginBottom"
+                        icon="sap-icon://drop-down-list"
+                        press="onTrainingStaff">
+                    <customData>
+                        <core:CustomData
+                                key="multi"
+                                value="true"/>
+                        <core:CustomData
+                                key="remember"
+                                value="true"/>
+                    </customData>
+                </Button>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <Text
+                    text="{i18n>trainingStaffDescription}"
+                    class="sapThemeHighlight-asColor panelHeadText"
+                    width="100%"/>
+            <Text
+                    text="{i18n>trainingStaffNumber}"
+                    class="sapThemeHighlight-asColor panelHeadText"
+                    width="100%"/>
+
+            <!--Dynamic creation of Training Staff parameters-->
+            <List items="{
+                  path: '/dynamicParameterRowsTrainingStaff'
+                  }"
+                  showNoData="false">
+                <CustomListItem type="Active">
+                    <Text
+                            text="{dynamicParameterTrainingStaffName}"
+                            class="sapThemeHighlight-asColor panelHeadText"
+                            width="100%"/>
+                    <Input
+                            value="{dynamicParameterTrainingStaffValue}"
+                            valueLiveUpdate="true"
+                            width="100%"/>
+                    <!--<Button-->
+                    <!--type="Default"-->
+                    <!--text="{i18n>trainingStaffUpdateSkill}"-->
+                    <!--press="onSkillType"-->
+                    <!--ariaDescribedBy="defaultButtonDescription genericButtonDescription">-->
+                    <!--<customData>-->
+                    <!--<core:CustomData-->
+                    <!--key="multi"-->
+                    <!--value="true"/>-->
+                    <!--<core:CustomData-->
+                    <!--key="remember"-->
+                    <!--value="true"/>-->
+                    <!--</customData>-->
+                    <!--</Button>-->
+                    <!-- Dynamic creation of Type parameters -->
+                    <!--<List items="{-->
+                    <!--path: '/dynamicParameterRowsType'-->
+                    <!--}"-->
+                    <!--showNoData="false">-->
+                    <!--<CustomListItem type="Active">-->
+                    <!--<Text-->
+                    <!--text="{dynamicParameterTypeTitle}"-->
+                    <!--class="sapThemeHighlight-asColor panelHeadText"-->
+                    <!--width="100%"/>-->
+
+                    <!--<Input-->
+                    <!--value="{dynamicParameterTypeInput}"-->
+                    <!--valueLiveUpdate="true"-->
+                    <!--width="100%"/>-->
+                    <!--</CustomListItem>-->
+                    <!--</List>-->
+                </CustomListItem>
+            </List>
+        </content>
+    </Panel>
+
+    <!-- Volume of Work Incoming -->
+    <Panel
+            width="100%"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>workIncomingTitle}"/>
+                <ToolbarSpacer/>
+                <Button
+                        class="sapUiSmallMarginBottom"
+                        icon="sap-icon://drop-down-list"
+                        press="onWork">
+                    <customData>
+                        <core:CustomData
+                                key="multi"
+                                value="true"/>
+                        <core:CustomData
+                                key="remember"
+                                value="true"/>
+                    </customData>
+                </Button>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <Text
+                    text="{i18n>workIncomingDescription}"
+                    class="sapThemeHighlight-asColor panelHeadText"/>
+
+            <!--Dynamic creation of Type parameters-->
+            <List items="{
+                  path: '/dynamicParameterRowsWork'
+                  }"
+                  showNoData="false">
+                <CustomListItem type="Active">
+                    <Text
+                            text="{dynamicParameterRowsWorkName}"
+                            class="sapThemeHighlight-asColor panelHeadText"
+                            width="100%"/>
+
+                    <Input
+                            value="{dynamicParameterRowsWorkValue}"
+                            valueLiveUpdate="true"
+                            width="100%"/>
+                </CustomListItem>
+            </List>
+
+        </content>
+    </Panel>
+
+    <!-- Sick Days -->
+    <Panel
+            width="100%"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>sickDaysTitle}"/>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <Text
+                    text="{i18n>sickDaysDescription}"
+                    class="sapThemeHighlight-asColor panelHeadText"/>
+        </content>
+    </Panel>
+
+    <!-- Staff Experience -->
+    <Panel
+            width="100%"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>staffExperienceTitle}"/>
+                <ToolbarSpacer/>
+                <Button
+                        class="sapUiSmallMarginBottom"
+                        icon="sap-icon://drop-down-list"
+                        press="onTrainingCondition">
+                    <customData>
+                        <core:CustomData
+                                key="multi"
+                                value="true"/>
+                        <core:CustomData
+                                key="remember"
+                                value="true"/>
+                    </customData>
+                </Button>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <Text
+                    text="{i18n>staffExperienceDescription}"
+                    class="sapThemeHighlight-asColor panelHeadText"/>
+
+            <!--Dynamic creation of Condition parameters-->
+            <List items="{
+                  path: '/dynamicParameterRowsCondition'
+                  }"
+                  showNoData="false">
+                <CustomListItem type="Active">
+                    <Text
+                            text="{dynamicParameterConditionID}"
+                            class="sapThemeHighlight-asColor panelHeadText"
+                            width="100%"/>
+
+                    <Input
+                            value="{dynamicParameterConditionTitle}"
+                            valueLiveUpdate="true"
+                            width="100%"/>
+                </CustomListItem>
+            </List>
+        </content>
+    </Panel>
+
+    <Button
+            type="Emphasized"
+            text="Model"
+            press="onParametersModel"
+            ariaDescribedBy="defaultButtonDescription genericButtonDescription">
+
+    </Button>
+    <Button
+            type="Reject"
+            text="Reset"
+            press="onParametersReset"
+            ariaDescribedBy="rejectButtonDescription genericButtonDescription">
+    </Button>
+</mvc:View>

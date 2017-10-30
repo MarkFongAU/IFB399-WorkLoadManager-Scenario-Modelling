@@ -1,0 +1,36 @@
+[
+  {
+    "WORK_ID": "ZIAM_MCA_NBE",
+    "WORK_NAME": "Medicare Newborn Enrolments"
+  },
+  {
+    "WORK_ID": "ZIAM_NSA_NCL",
+    "WORK_NAME": "Newstart Allowance - New Claim"
+  },
+  {
+    "WORK_ID": "ZCLM_ZYAS",
+    "WORK_NAME": "Youth Allowance Student New Claim"
+  },
+  {
+    "WORK_ID": "ZIAM_AGE_NCL",
+    "WORK_NAME": "Age Pension New Claim"
+  },
+  {
+    "WORK_ID": "ZIAM_DSP_NCL",
+    "WORK_NAME": "DSP New Claim"
+  },
+  {
+    "WORK_ID": "ZIAM_PPL_NCL",
+    "WORK_NAME": "Paid parental Leave New Claim"
+  },
+  {
+    "WORK_ID": "ZIAM_CCF_NCL",
+    "WORK_NAME": "Child Care Benefit New Claim"
+  }
+]
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE mvc:View>
+<!-- View of the Metrics List Division -->
+<!-- Author: Frank (PengYuan Ge) -->
+<mvc:View
+	controllerName="ScenarioMod.controller.MetricsList"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <!--Items Completed Panel-->
+    <Panel
+            width="100%"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>metricsListTitle}"/>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <!--Items Overdue Panel-->
+            <List
+                    items="{
+			            path: '/'
+		            }">
+                <CustomListItem class="sapThemeHighlight-asColor listValueText"
+                                visible="true"
+                                press="onPress"
+                                type="Active">
+                    <Text
+                            text="{METRICS_NAME}"
+                            class="sapThemeHighlight-asColor listValueText"
+                            width="100%"/>
+                </CustomListItem>
+            </List>
+        </content>
+    </Panel>
+</mvc:View>

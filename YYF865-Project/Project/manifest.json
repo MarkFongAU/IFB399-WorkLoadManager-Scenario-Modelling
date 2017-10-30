@@ -1,0 +1,94 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+    "_version": "1.1.0",
+    "id": "ScenarioMod",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{tileTitle}}",
+    "description": "{{tileDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "ach": "CA-UI5-DOC",
+    "dataSources": {
+      "ParametersRemote": {
+        "uri": "/ScenarioMod/DataSet/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_belize"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "rootView": {
+      "viewName" : "ScenarioMod.view.App",
+      "id" : "root",
+      "type" : "XML"
+    },
+    "dependencies": {
+      "minUI5Version": "1.30",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.comp": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ScenarioMod.i18n.i18n"
+        }
+      },
+      "parameters": {
+        "dataSource": "ParametersRemote"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "ScenarioMod.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
+        }
+      ],
+      "targets": {
+        "overview": {
+          "viewName": "Overview"
+        }
+      }
+    }
+  }
+}

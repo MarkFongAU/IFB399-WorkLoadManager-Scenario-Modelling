@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE mvc:View>
+<!-- View of the Metrics List Division -->
+<!-- Author: Mark (YeeChen Fong) -->
+<mvc:View
+        controllerName="ScenarioMod.controller.ParametersList"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:core="sap.ui.core">
+
+    <!-- Priority -->
+    <Panel
+            width="100%"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>workPriorityTitle}"/>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <Text
+                    text="{i18n>workPriorityDescription}"
+                    class="sapThemeHighlight-asColor panelHeadText"
+                    width="100%"/>
+
+            <!-- Dynamic creation of Base Priorities parameters -->
+            <List items="{
+                  path: '/dynamicParameterRowsBasePriorities'
+                  }"
+                  showNoData="false">
+                <CustomListItem type="Active">
+                    <Text
+                            text="{dynamicParameterBasePrioritiesFullName}"
+                            class="sapThemeHighlight-asColor panelHeadText"
+                            width="100%"/>
+
+                    <Input
+                            value="{dynamicParameterBasePrioritiesValue}"
+                            valueLiveUpdate="true"
+                            width="100%"/>
+                </CustomListItem>
+            </List>
+        </content>
+    </Panel>
+    <Button
+            type="Emphasized"
+            text="Model"
+            press="onParametersModel"
+            ariaDescribedBy="defaultButtonDescription genericButtonDescription">
+
+    </Button>
+    <Button
+            type="Reject"
+            text="Reset"
+            press="onParametersReset"
+            ariaDescribedBy="rejectButtonDescription genericButtonDescription">
+    </Button>
+</mvc:View>

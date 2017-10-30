@@ -1,0 +1,6 @@
+service {
+	"BLR131"."FINAL_INPUT_TABLE" as "Parameters";
+	"BLR131"."PAL_PREDICT_NN_RESULT_TBL" as "Predicted";
+}
+
+

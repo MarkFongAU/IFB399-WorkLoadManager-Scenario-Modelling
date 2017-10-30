@@ -1,0 +1,23 @@
+[
+  {
+    "SKILL_ID": 1,
+    "SKILL_NAME": "ZYAS"
+  },
+  {
+    "SKILL_ID": 2,
+    "SKILL_NAME": "NV_CLK_NCL_Student_YAL_Over22"
+  },
+  {
+    "SKILL_ID": 3,
+    "SKILL_NAME": "NV_CLK_NCL_Student_YAL_Under22"
+  },
+  {
+    "SKILL_ID": 4,
+    "SKILL_NAME": "NV_CLK_NCL_Jobseeker"
+  },
+  {
+    "SKILL_ID": 5,
+    "SKILL_NAME": "NV_CLK_NCL_AGDRP"
+  }
+]
+

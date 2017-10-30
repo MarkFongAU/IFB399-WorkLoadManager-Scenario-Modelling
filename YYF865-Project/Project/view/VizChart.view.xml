@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE mvc:View>
+<!-- View of the VizChart -->
+<!-- Author: Frank (PengYuan Ge) -->
+<mvc:View
+        controllerName="ScenarioMod.controller.VizChart"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:viz="sap.viz.ui5.controls"
+        xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+        xmlns:viz.data="sap.viz.ui5.data">
+    <!-- Chart of Completed Work Items -->
+    <viz:Popover id="popOverCompleted">
+    </viz:Popover>
+    <viz:VizFrame id="columnChartCompleted" uiConfig="{applicationSet:'fiori'}"
+                  vizType="column" width="100%" visible="true">
+        <viz:dataset>
+            <viz.data:FlattenedDataset data="{
+                path: '/CompletedWorkItems'
+            }">
+                <viz.data:dimensions>
+                    <viz.data:DimensionDefinition name="FullName" value="{FullName}">
+                    </viz.data:DimensionDefinition>
+                </viz.data:dimensions>
+                <viz.data:measures>
+                    <viz.data:MeasureDefinition name="HistoricValue" value="{HistoricValue}">
+                    </viz.data:MeasureDefinition>
+                    <viz.data:MeasureDefinition name="PredictedValue" value="{PredictedValue}">
+                    </viz.data:MeasureDefinition>
+                </viz.data:measures>
+            </viz.data:FlattenedDataset>
+        </viz:dataset>
+        <viz:feeds>
+            <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                                values="HistoricValue"/>
+            <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                                values="PredictedValue"/>
+            <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                                values="FullName"/>
+        </viz:feeds>
+    </viz:VizFrame>
+
+    <!-- Chart of Overdue Work Items -->
+    <viz:Popover id="popOverOverdue">
+    </viz:Popover>
+    <viz:VizFrame id="columnChartOverdue" uiConfig="{applicationSet:'fiori'}"
+                  vizType="column" width="100%" visible="false">
+        <viz:dataset>
+            <viz.data:FlattenedDataset data="{
+                path: '/OverdueWorkItems'
+            }">
+                <viz.data:dimensions>
+                    <viz.data:DimensionDefinition name="FullName" value="{FullName}">
+                    </viz.data:DimensionDefinition>
+                </viz.data:dimensions>
+                <viz.data:measures>
+                    <viz.data:MeasureDefinition name="PredictedValue" value="{PredictedValue}">
+                    </viz.data:MeasureDefinition>
+                    <viz.data:MeasureDefinition name="HistoricValue" value="{HistoricValue}">
+                    </viz.data:MeasureDefinition>
+                </viz.data:measures>
+            </viz.data:FlattenedDataset>
+        </viz:dataset>
+        <viz:feeds>
+            <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                                values="HistoricValue"/>
+            <viz.feeds:FeedItem uid="valueAxis" type="Measure"
+                                values="PredictedValue"/>
+            <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                                values="FullName"/>
+        </viz:feeds>
+    </viz:VizFrame>
+</mvc:View>

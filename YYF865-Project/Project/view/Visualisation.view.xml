@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE mvc:View>
+<!-- View of the Metrics List Division -->
+<!-- Author: Frank (PengYuan Ge) -->
+<mvc:View
+        controllerName="ScenarioMod.controller.Visualisation"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Panel
+            width="1000px"
+            expandable="true" expanded="true">
+        <headerToolbar>
+            <Toolbar height="3rem">
+                <Title text="{i18n>dataVisualisationTitle}"/>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </headerToolbar>
+        <content>
+            <mvc:XMLView id="vizChart" viewName="ScenarioMod.view.VizChart"/>
+        </content>
+    </Panel>
+</mvc:View>

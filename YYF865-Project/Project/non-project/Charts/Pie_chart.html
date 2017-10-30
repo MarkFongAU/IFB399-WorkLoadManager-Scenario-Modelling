@@ -1,0 +1,57 @@
+  <html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+  
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+  google.charts.setOnLoadCallback(drawBasic);
+  
+  function drawBasic() {
+  
+        var data = new google.visualization.DataTable();
+        data.addColumn('timeofday', 'Time of Day');
+        data.addColumn('number', 'Current');
+  
+        var data = google.visualization.arrayToDataTable([
+        ['Time', 'Current'],
+        ['6:00',     4000],
+        ['7:00',      6000],
+        ['8:00',  5000],
+        ['9:00', 3000],
+        ['10:00',    7000],
+        ['11:00',    4000],
+        ['12:00',    2000],
+        ['13:00',    5000],
+        ['14:00',    7000],
+        ['15:00',    6000],
+        ['16:00',    3000],
+        ['17:00',    1000],
+        ]);
+  
+        var options = {
+          width: 1200,
+          height: 600,
+          title: 'Scenario Modelling',
+          hAxis: {
+            title: 'Time',
+            format: 'h:mm a',
+            
+           
+          },
+          vAxis: {
+            title: 'No. Of Workitems'
+          }
+        };
+  
+        var chart = new google.visualization.ColumnChart(
+          document.getElementById('chart_div'));
+  
+        chart.draw(data, options);
+      }
+      </script>
+    </head>
+  
+    <body>
+      <div id="chart_div"></div>
+    </body>
+  </html>

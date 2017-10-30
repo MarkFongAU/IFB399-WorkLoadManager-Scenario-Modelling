@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+        <!DOCTYPE edmx:Edmx>
+<edmx:Edmx Version="1.0"
+           xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+<edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+        m:DataServiceVersion="2.0">
+    <Schema Namespace="users.YFF865.WorkOptimiser.Project.ParametersListOData"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="ParametersType">
+            <Key>
+                <PropertyRef Name="PRODUCT_ID"/>
+            </Key>
+            <Property Name="PRODUCT_ID" Type="Edm.Int32" Nullable="false"/>
+            <Property Name="PRODUCT_NAME" Type="Edm.String" MaxLength="100"/>
+            <Property Name="SUPPLIER_COUNTRY" Type="Edm.String"
+                      MaxLength="50"/>
+        </EntityType>
+        <EntityContainer Name="ParametersListOData"
+                         m:IsDefaultEntityContainer="true">
+            <EntitySet Name="Parameters"
+                       EntityType="users.YFF865.WorkOptimiser.Project.ParametersListOData.ParametersType"/>
+        </EntityContainer>
+    </Schema>
+</edmx:DataServices>
+</edmx:Edmx>
+
+<!-- This is a dummy metadata.xml -->

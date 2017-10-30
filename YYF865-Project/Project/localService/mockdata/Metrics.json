@@ -1,0 +1,10 @@
+[
+  {
+    "METRICS_ID": 1,
+    "METRICS_NAME": "Number of items completed"
+  },
+  {
+    "METRICS_ID": 2,
+    "METRICS_NAME": "Number of overdue items completed"
+  }
+]

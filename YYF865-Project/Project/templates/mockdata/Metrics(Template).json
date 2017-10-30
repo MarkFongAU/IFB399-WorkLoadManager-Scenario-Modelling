@@ -1,0 +1,46 @@
+[
+  {
+    "METRICS_ID": 1,
+    "METRICS_NAME": "Number of items completed"
+  },
+  {
+    "METRICS_ID": 2,
+    "METRICS_NAME": "Number of overdue items completed"
+  },
+  {
+    "METRICS_ID": 3,
+    "METRICS_NAME": "Overall number of items overdue"
+  },
+  {
+    "METRICS_ID": 4,
+    "METRICS_NAME": "Overall average clear time"
+  },
+  {
+    "METRICS_ID": 5,
+    "METRICS_NAME": "Average clear time for each specific work item"
+  },
+  {
+    "METRICS_ID": 6,
+    "METRICS_NAME": "Overall average items cleared per day"
+  },
+  {
+    "METRICS_ID": 7,
+    "METRICS_NAME": "Number of work coming into center"
+  },
+  {
+    "METRICS_ID": 8,
+    "METRICS_NAME": "Average cleared per day for each work item type"
+  },
+  {
+    "METRICS_ID": 9,
+    "METRICS_NAME": "Overall number overdue"
+  },
+  {
+    "METRICS_ID": 10,
+    "METRICS_NAME": "Number overdue per work item type"
+  },
+  {
+    "METRICS_ID": 11,
+    "METRICS_NAME": "Number overdue cleared per day"
+  }
+]

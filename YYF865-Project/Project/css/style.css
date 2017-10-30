@@ -1,0 +1,29 @@
+/* Author: Frank (PengYuan Ge) */
+
+.myAppScenarioMod .panelHeadText {
+    font-weight: bold;
+}
+
+.myAppScenarioMod .inputValueText {
+    font-weight: normal;
+}
+
+.myAppScenarioMod .currentValueText {
+    color: grey;
+}
+
+.myAppScenarioMod .listValue {
+    background-color: lightblue;
+}
+
+.myAppScenarioMod .listValueText {
+    /*background-color: lightblue;*/
+    /*color: white;*/
+    font-size: 16px;
+    padding: 4px
+}
+
+.myAppScenarioMod .displayChart {
+    min-width: 100%;
+    padding: 4px
+}

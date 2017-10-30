@@ -1,0 +1,47 @@
+[
+  {
+    "__metadata": {
+      "type": "users.YFF865.WorkOptimiser.Project.ParametersListOData.ParametersType",
+      "uri": "http://ha4s1n1.hana.csda.gov.au:8030/users/YFF865/WorkOptimiser/Project/ParametersListOData.xsodata/Parameters(1)"
+    },
+    "PRODUCT_ID": 1,
+    "PRODUCT_NAME": "Shirts",
+    "SUPPLIER_COUNTRY": "India"
+  },
+  {
+    "__metadata": {
+      "type": "users.YFF865.WorkOptimiser.Project.ParametersListOData.ParametersType",
+      "uri": "http://ha4s1n1.hana.csda.gov.au:8030/users/YFF865/WorkOptimiser/Project/ParametersListOData.xsodata/Parameters(2)"
+    },
+    "PRODUCT_ID": 2,
+    "PRODUCT_NAME": "Jackets",
+    "SUPPLIER_COUNTRY": "India"
+  },
+  {
+    "__metadata": {
+      "type": "users.YFF865.WorkOptimiser.Project.ParametersListOData.ParametersType",
+      "uri": "http://ha4s1n1.hana.csda.gov.au:8030/users/YFF865/WorkOptimiser/Project/ParametersListOData.xsodata/Parameters(3)"
+    },
+    "PRODUCT_ID": 3,
+    "PRODUCT_NAME": "Watches",
+    "SUPPLIER_COUNTRY": "Japan"
+  },
+  {
+    "__metadata": {
+      "type": "users.YFF865.WorkOptimiser.Project.ParametersListOData.ParametersType",
+      "uri": "http://ha4s1n1.hana.csda.gov.au:8030/users/YFF865/WorkOptimiser/Project/ParametersListOData.xsodata/Parameters(4)"
+    },
+    "PRODUCT_ID": 4,
+    "PRODUCT_NAME": "Mobile",
+    "SUPPLIER_COUNTRY": "USA"
+  },
+  {
+    "__metadata": {
+      "type": "users.YFF865.WorkOptimiser.Project.ParametersListOData.ParametersType",
+      "uri": "http://ha4s1n1.hana.csda.gov.au:8030/users/YFF865/WorkOptimiser/Project/ParametersListOData.xsodata/Parameters(5)"
+    },
+    "PRODUCT_ID": 5,
+    "PRODUCT_NAME": "Purse",
+    "SUPPLIER_COUNTRY": "India"
+  }
+]

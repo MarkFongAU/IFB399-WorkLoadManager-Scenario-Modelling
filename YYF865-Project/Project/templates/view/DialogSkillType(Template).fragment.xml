@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE core:FragmentDefinition>
+<!-- View Template of the Skill Type Dialog Fragment -->
+<!-- Author: Mark (YeeChen Fong) -->
+<!-- (Template is not 100% functional without making adjustments, USE AT OWN DISCRETION) -->
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core">
+    <SelectDialog
+            id="dialog_SKILL"
+            noDataText="No Options Found"
+            title="{i18n>optionsTitle} {i18n>optionsSkillTitle}"
+            liveChange="onDialogSearch"
+            confirm="onAddRemoveCategoryType"
+            close="onAddRemoveCategoryType"
+            items="{
+            path : '/'
+		}">
+        <StandardListItem
+                title="{SKILL_NAME}"
+                description="{SKILL_NAME}"
+                type="Active">
+        </StandardListItem>
+    </SelectDialog>
+</core:FragmentDefinition>
